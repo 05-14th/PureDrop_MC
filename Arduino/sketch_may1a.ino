@@ -46,14 +46,7 @@ void setup() {
 }
 
 void loop() {
-  int wlValue = digitalRead(waterLevelPin); // Read sensor value
   
-  // Check if the sensor value is HIGH or LOW
-  if (wlValue == HIGH) {
-    digitalWrite(RELAY_PIN, 0);
-  } else {
-    digitalWrite(RELAY_PIN, 1);
-  }
   
   // Read the analog voltage from the sensor
   voltage = analogRead(sensorPin) * 5.0 / 1024.0; // Convert the analog reading to voltage
@@ -128,5 +121,11 @@ void loop() {
   Serial.println(dataString);
   delay(1000); // Delay for 1 second before taking the next reading
 }
+
+
+
+
+
+
 
 
